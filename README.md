@@ -1,3 +1,11 @@
+ __      __        ___                                                                                                                                                  
+|__) __ |__)  /\  |__                                                                                                                                                   
+|       |  \ /~~\ |                                                                                                                                                     
+                                                                                                                                                                        
+ __   __   __   __   ___  __   __   __   __      __            ___          ___                             __     __      ___  __              ___       __   __       
+|__) |__) /  \ /  ` |__  /__` /__` /  \ |__)    |__) |  | |\ |  |  |  |\/| |__      /\  |\ |  /\  |    \ / /__` | /__`    |__  |__)  /\   |\/| |__  |  | /  \ |__) |__/ 
+|    |  \ \__/ \__, |___ .__/ .__/ \__/ |  \    |  \ \__/ | \|  |  |  |  | |___    /~~\ | \| /~~\ |___  |  .__/ | .__/    |    |  \ /~~\  |  | |___ |/\| \__/ |  \ |  \ 
+                                                                                                                                                                                                                      
 # P-RAF: Processor-Runtime Analysis Framework
 Version: 1.0 
 Date: 24 June 2025
@@ -226,6 +234,7 @@ Run after changing Java/Rust code, before starting the orchestrator.
 Note: This script is not part of the runtime execution path. Orchestrator assumes workers are pre-compiled.
 
 6. Benchmark Methodology & Measurement
+
 P-RAF (currently) focuses on algorithmic microbenchmarks—short, well-defined computational tasks implemented in each language.
 Each algorithm is chosen for its typical presence in real workloads, and its varying pressure on the CPU, memory, and language runtime.
 
@@ -239,6 +248,7 @@ Algorithms currently benchmarked:
 - Leap year check (is_leap_year)
 
 6.1 Benchmark Execution Loop
+
 Each worker repeatedly executes its assigned algorithm in a tight loop:
 Start time is recorded (with nanosecond or high-res clock).
 The algorithm runs to completion.
@@ -247,16 +257,19 @@ Result is sent immediately as a JSON payload to the orchestrator via TCP.
 Each worker runs as its own OS thread/process for true concurrency and to best reflect typical language runtime performance.
 
 6.3 Timing & Overhead
+
 Timing: Uses high-precision clocks (Process.clock_gettime in Ruby, std::time::Instant in Rust, System.nanoTime in Java, time.time() in Python) to avoid measuring unrelated system delays.
 I/O Overhead: Sending results is done after timing is stopped. Only pure algorithm execution time is measured.
 Backoff & Resilience: If a worker disconnects (network or orchestrator restart), it retries every 2s
 
 6.4 Measurement Caveats
+
 Each language’s implementation is as direct as possible (idiomatic, not “hyper-optimized” for one).
 Results are not synchronized between languages—each algorithm loop is independent, so dashboard rates reflect both speed and thread/process scheduling.
 Benchmarks are microbenchmarks; real-world code may behave differently due to GC, JIT, OS effects, etc.
 
 6.5 Visualizing Results
+
 The Web Dashboard live-aggregates all measurements, letting you compare:
 
 Throughput (runs/sec)
@@ -264,12 +277,12 @@ Average and minimum duration
 Per-language, per-algorithm breakdown
 
 7. Contributions
+
 Just me, testing and trying out things.
 
-
-8. Contact
-Thomas@Tannenberg.online
+---
 
 
 Licence MIT (c) Thomas Tannenberg, 2025
+
 Questions? Feature requests? Open an issue or pull request!
