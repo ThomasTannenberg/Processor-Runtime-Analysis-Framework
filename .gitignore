@@ -1,0 +1,24 @@
+# General
+*.log
+*.tmp
+*.bak
+
+# Python
+__pycache__/
+*.pyc
+venv/
+*.env
+
+# Java (Maven)
+java_benchmark/target/
+java_benchmark/pom.xml.tag
+java_benchmark/pom.xml.releaseBackup
+java_benchmark/pom.xml.versionsBackup
+java_benchmark/release.properties
+
+# Rust (Cargo)
+rust_benchmark/target/
+rust_benchmark/Cargo.lock
+
+# IDE - VSCode
+.vscode/
