@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P-RAF Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>P-RAF Dashboard</h1>
+            <div class="status">
+                <span>Connection Status:</span>
+                <span id="connection-status" class="disconnected">● Disconnected</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="toolbar">
+            <button id="reset-button">Reset Stats</button>
+        </div>
+
+        <div class="stats-grid" id="stats-grid">
+            <!-- JavaScript will populate this grid dynamically -->
+        </div>
+
+        <div class="log-panel">
+            <h2>Event Log</h2>
+            <div id="log-box" class="log-box">
+                <div class="log-message info">Awaiting connection to orchestrator...</div>
+            </div>
+        </div>
+    </main>
+
+    <!-- The main JavaScript file that powers the dashboard -->
+    <script src="main.js"></script>
+</body>
+
+</html>
