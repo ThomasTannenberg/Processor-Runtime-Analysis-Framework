@@ -1,11 +1,4 @@
- __      __        ___                                                                                                                                                  
-|__) __ |__)  /\  |__                                                                                                                                                   
-|       |  \ /~~\ |                                                                                                                                                     
-                                                                                                                                                                        
- __   __   __   __   ___  __   __   __   __      __            ___          ___                             __     __      ___  __              ___       __   __       
-|__) |__) /  \ /  ` |__  /__` /__` /  \ |__)    |__) |  | |\ |  |  |  |\/| |__      /\  |\ |  /\  |    \ / /__` | /__`    |__  |__)  /\   |\/| |__  |  | /  \ |__) |__/ 
-|    |  \ \__/ \__, |___ .__/ .__/ \__/ |  \    |  \ \__/ | \|  |  |  |  | |___    /~~\ | \| /~~\ |___  |  .__/ | .__/    |    |  \ /~~\  |  | |___ |/\| \__/ |  \ |  \ 
-                                                                                                                                                                                                                      
+                                       
 # P-RAF: Processor-Runtime Analysis Framework
 Version: 1.0 
 Date: 24 June 2025
@@ -46,26 +39,26 @@ Compare algorithm speed and runtime performance across Python, Ruby, Java, and R
 
 3. Project Structure
 
-Processor-Runtime-Analysis-Framework/
-├── .gitignore
-├── README.md                               # you are here, LOL
-├── praf_orchestrator.py
-│
-├── dashboard/
-│   ├── dashboard.html
-│   ├── main.js
-│   └── style.css
-│
-├── java_benchmark/
-│    └──src/java/com/benchmark: Benchmark.java
-├── python_benchmark/
-│    └──benchmark.py
-├── ruby_benchmark/
-│    └──benchmark.rb
-├── rust_benchmark/ 
-│    └──src: main.rs
-│
-└── tools/
+    Processor-Runtime-Analysis-Framework/
+    ├── .gitignore
+    ├── README.md                               # you are here, LOL
+    ├── praf_orchestrator.py
+    │
+    ├── dashboard/
+    │   ├── dashboard.html
+    │   ├── main.js
+    │   └── style.css
+    │
+    ├── java_benchmark/
+    │    └──src/java/com/benchmark: Benchmark.java
+    ├── python_benchmark/
+    │    └──benchmark.py
+    ├── ruby_benchmark/
+    │    └──benchmark.rb
+    ├── rust_benchmark/ 
+    │    └──src: main.rs
+    │
+    └── tools/
     └── build_manager.py
 
 
