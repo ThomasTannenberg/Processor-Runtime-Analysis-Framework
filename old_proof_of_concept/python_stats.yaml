@@ -1,0 +1,30 @@
+array_sort:
+  max_time: 0.14337130000058096
+  min_time: 3.3000032999552786e-06
+  runs: 352
+  total_time: 10.073714899968763
+fibonacci:
+  max_time: 0.0
+  min_time: .inf
+  runs: 0
+  total_time: 0.0
+game_of_life:
+  max_time: 0.42298070000106236
+  min_time: 0.0005376000044634566
+  runs: 67
+  total_time: 10.082078400017053
+is_leap_year:
+  max_time: 0.003846500003419351
+  min_time: 1.9999424694105983e-07
+  runs: 12025423
+  total_time: 5.160856105176208
+matrix_multiplication:
+  max_time: 0.2500599999984843
+  min_time: 5.8099998568650335e-05
+  runs: 154
+  total_time: 10.08194130002812
+prime_factors:
+  max_time: 0.0
+  min_time: .inf
+  runs: 0
+  total_time: 0.0
